@@ -32,10 +32,10 @@ public class Program {
 			System.out.println(obj);
 		}
 		
-		/*System.out.println("\n=== TEST4: seller insert ===");
+		System.out.println("\n=== TEST4: seller insert ===");
 		Seller newSeller = new Seller(null, "Greg Orange", "greg@gmail.com", new Date(), 4000.0, department);
 		sellerDao.insert(newSeller);
-		System.out.println("Inserted! New id = " + newSeller.getId());*/
+		System.out.println("Inserted! New id = " + newSeller.getId());
 		
 		System.out.println("\n=== TEST5: seller update ===");
 		seller = sellerDao.findById(8);
@@ -44,5 +44,9 @@ public class Program {
 		seller.setBaseSalary(2100.0);
 		sellerDao.update(seller);
 		System.out.println("Update completed");
+		
+		System.out.println("\n=== TEST6: seller delete ===");
+		sellerDao.deleteById(11);
+		System.out.println("Delete completed");
 	}
 }
